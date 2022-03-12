@@ -1,2 +1,2 @@
 #!/bin/bash
-rm *~
+mv src/*[A-Z]
