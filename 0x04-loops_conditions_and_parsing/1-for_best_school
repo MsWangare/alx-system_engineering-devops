@@ -2,3 +2,15 @@
 # displays Best School10 times
 
 for ((i = 0; i < 10; i++)); do echo "Best School"; done
+# create a manifest that kills a process named killmenow
+# install puppet-lint
+
+package { 'puppet-lint':
+  ensure   => '2.1.1',
+  provider => 'gem',
+}
+
+exec { 'pkill':
+  command  => 'pkill -f killmenow',
+  provider => 'shell',
+}
